@@ -16,7 +16,6 @@ prev_x, prev_y = 0, 0
 smoothening = 3
 
 
-
 clicking = False
 dragging = False
 drag_start_time = None
@@ -89,10 +88,6 @@ while True:
 
 
 
-
-
-
-
                 # Right Click
                 if dist_thumb_middle < 30 and not right_clicking:
                     right_clicking = True
@@ -101,7 +96,7 @@ while True:
                 elif dist_thumb_middle >= 30:
                     right_clicking = False
 
-                # --- Double Click ---
+                #Double Click
                 if dist_thumb_ring < 30 and not double_clicking:
                     double_clicking = True
                     pyautogui.doubleClick()
@@ -125,9 +120,6 @@ while True:
                         curr_y = prev_y + (screen_y - prev_y) / smoothening
                         pyautogui.moveTo(curr_x, curr_y)
                         prev_x, prev_y = curr_x, curr_y
-
-
-
 
 
 
